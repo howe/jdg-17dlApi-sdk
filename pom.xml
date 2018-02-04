@@ -9,6 +9,7 @@
     <packaging>jar</packaging>
     <name>接单狗对接接口（17代练）- SDK</name>
     <url>https://github.com/howe/jdg-17dlInf-sdk</url>
+    <description>接单狗电竞服务平台</description>
 
     <dependencies>
         <dependency>
