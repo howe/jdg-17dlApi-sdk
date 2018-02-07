@@ -44,6 +44,19 @@ public class PrOrder {
     }
 
     /**
+     * 合作商订单号
+     */
+    private String outOrderNum;
+
+    public String getOutOrderNum() {
+        return outOrderNum;
+    }
+
+    public void setOutOrderNum(String outOrderNum) {
+        this.outOrderNum = outOrderNum;
+    }
+
+    /**
      * 服务商订单号
      */
     private String pOrderNum;
