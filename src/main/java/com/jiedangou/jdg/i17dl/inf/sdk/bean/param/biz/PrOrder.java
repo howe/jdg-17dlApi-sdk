@@ -546,4 +546,17 @@ public class PrOrder {
     public void setOrderSource(String orderSource) {
         this.orderSource = orderSource;
     }
+
+    /**
+     * 订单处理
+     */
+    private String orderReceive;
+
+    public String getOrderReceive() {
+        return orderReceive;
+    }
+
+    public void setOrderReceive(String orderReceive) {
+        this.orderReceive = orderReceive;
+    }
 }
