@@ -31,7 +31,7 @@ public class PrOrder {
     }
 
     /**
-     * 合作商Id
+     * 合作商ID
      */
     private Integer partnerId;
 
@@ -113,6 +113,9 @@ public class PrOrder {
         this.orderStatus = orderStatus;
     }
 
+    /**
+     * 游戏ID
+     */
     private Integer gameId;
 
     public Integer getGameId() {
@@ -136,6 +139,9 @@ public class PrOrder {
         this.gameName = gameName;
     }
 
+    /**
+     * 渠道ID
+     */
     private Integer channelId;
 
     public Integer getChannelId() {
@@ -160,6 +166,19 @@ public class PrOrder {
     }
 
     /**
+     * 服务器ID
+     */
+    private Integer serverId;
+
+    public Integer getServerId() {
+        return serverId;
+    }
+
+    public void setServerId(Integer serverId) {
+        this.serverId = serverId;
+    }
+
+    /**
      * 服务器名称
      */
     private String serverName;
@@ -170,16 +189,6 @@ public class PrOrder {
 
     public void setServerName(String serverName) {
         this.serverName = serverName;
-    }
-
-    private Integer serverId;
-
-    public Integer getServerId() {
-        return serverId;
-    }
-
-    public void setServerId(Integer serverId) {
-        this.serverId = serverId;
     }
 
     /**
@@ -513,7 +522,7 @@ public class PrOrder {
     }
 
     /**
-     * 订单是否锁定
+     * 订单锁定状态
      */
     private Boolean isLock;
 
@@ -523,5 +532,18 @@ public class PrOrder {
 
     public void setLock(Boolean lock) {
         isLock = lock;
+    }
+
+    /**
+     * 订单来源
+     */
+    private String orderSource;
+
+    public String getOrderSource() {
+        return orderSource;
+    }
+
+    public void setOrderSource(String orderSource) {
+        this.orderSource = orderSource;
     }
 }
