@@ -17,6 +17,7 @@ public class Dict {
     public static String JDG_API_ACTION_ORDER_GETNEWORDERLIST = "/order/getNewOrderList.htm";
     public static String JDG_API_ACTION_ORDER_ACCEPTORDER = "/order/acceptOrder.htm";
     public static String JDG_API_ACTION_ORDER_FETCHORDER = "/order/fetchOrder.htm";
+    public static String JDG_API_ACTION_ORDER_GETORDER = "/order/getOrder.htm";
     public static String JDG_API_ACTION_ORDER_BEGINORDER = "/order/beginOrder.htm";
     public static String JDG_API_ACTION_ORDER_ABNORMALORDER = "/order/abnormalOrder.htm";
     public static String JDG_API_ACTION_ORDER_COMPLETEORDER = "/order/completeOrder.htm";
