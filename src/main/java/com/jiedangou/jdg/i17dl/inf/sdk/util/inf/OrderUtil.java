@@ -180,6 +180,49 @@ public class OrderUtil {
     }
 
     /**
+     * 4.11 获取订单信息
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static PrOrder getOrder(Integer providerId, String key, GetOrder biz) {
+
+        try {
+
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getOutOrderNum())) {
+                throw new Exception("合作商订单号为空");
+            }
+            if (Lang.isEmpty(biz.getGameId())) {
+                throw new Exception("游戏ID为空");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_FETCHORDER, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return resp.getData().getAs("order", PrOrder.class);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
      * 4.5 开始订单任务
      *
      * @param providerId
