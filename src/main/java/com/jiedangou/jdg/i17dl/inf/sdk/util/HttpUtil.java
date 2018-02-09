@@ -52,7 +52,7 @@ public class HttpUtil {
             } else if (parms.isEmpty()) {
                 throw new Exception("parms为空");
             } else {
-                return Http.post(url, parms, 10000);
+                return Http.post(url, parms, 15000);
             }
         } catch (Exception e) {
             return null;
@@ -73,7 +73,7 @@ public class HttpUtil {
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else {
-                return Http.post(url, null, 10000);
+                return Http.post(url, null, 15000);
             }
         } catch (Exception e) {
             return null;
@@ -102,7 +102,7 @@ public class HttpUtil {
             } else if (parms.isEmpty()) {
                 throw new Exception("parms为空");
             } else {
-                return Http.post3(url, parms, header, 10000).getContent();
+                return Http.post3(url, parms, header, 15000).getContent();
             }
         } catch (Exception e) {
             return null;
@@ -128,7 +128,7 @@ public class HttpUtil {
             } else if (header.getAll().isEmpty()) {
                 throw new Exception("header为空");
             } else {
-                return Http.get(url, header, 10000).getContent();
+                return Http.get(url, header, 15000).getContent();
             }
         } catch (Exception e) {
             return null;
@@ -155,7 +155,7 @@ public class HttpUtil {
                 Request req = Request.create(url, Request.METHOD.POST);
                 req.getHeader().set("Content-Type", "application/json;charset=UTF-8");
                 req.setData(json);
-                Response resp = Sender.create(req).setTimeout(6000).send();
+                Response resp = Sender.create(req).setTimeout(15000).send();
                 return resp.getContent();
             }
         } catch (Exception e) {
@@ -179,7 +179,7 @@ public class HttpUtil {
             } else if (Lang.isEmpty(xml)) {
                 throw new Exception("xml为空");
             } else {
-                return Http.postXML(url, xml, 10000).getContent();
+                return Http.postXML(url, xml, 15000).getContent();
             }
         } catch (Exception e) {
             return null;
