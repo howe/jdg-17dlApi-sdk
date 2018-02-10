@@ -7,16 +7,35 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
  */
 public class AcceptOrder {
 
-    private String orderNum;
-
+    /**
+     * 服务商订单号
+     */
     private String pOrderNum;
 
-    public String getOrderNum() {
-        return orderNum;
+    /**
+     * 合作商订单号
+     */
+    private String outOrderNum;
+
+    /**
+     * 服务商处理员信息
+     */
+    private String receiver;
+
+    public String getReceiver() {
+        return receiver;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public String getOutOrderNum() {
+        return outOrderNum;
+    }
+
+    public void setOutOrderNum(String outOrderNum) {
+        this.outOrderNum = outOrderNum;
     }
 
     public String getpOrderNum() {
@@ -30,8 +49,9 @@ public class AcceptOrder {
     public AcceptOrder() {
     }
 
-    public AcceptOrder(String orderNum, String pOrderNum) {
-        this.orderNum = orderNum;
+    public AcceptOrder(String outOrderNum, String pOrderNum, String receiver) {
         this.pOrderNum = pOrderNum;
+        this.outOrderNum = outOrderNum;
+        this.receiver = receiver;
     }
 }
