@@ -117,8 +117,8 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
-                throw new Exception("接单狗订单号为空");
+            if (Strings.isBlank(biz.getOutOrderNum())) {
+                throw new Exception("合作商订单号为空");
             }
             BaseReq req = new BaseReq();
             req.setProviderId(providerId);
