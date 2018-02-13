@@ -333,7 +333,7 @@ public class JdgUtil {
     public static Account accountEncryption(Account account) {
 
         account.setCsrPassword(Base64.encode(account.getCsrPassword()));
-        account.setCsrRole(Url.encode(account.getCsrRole()));
+        account.setCsrRole(Base64.encode(account.getCsrRole()));
         return account;
     }
 
@@ -345,7 +345,7 @@ public class JdgUtil {
      */
     public static Account accountDecryption(Account account) {
         account.setCsrPassword(Base64.decode(account.getCsrPassword()));
-        account.setCsrRole(Url.decode(account.getCsrRole()));
+        account.setCsrRole(Base64.decode(account.getCsrRole()));
         return account;
     }
 
