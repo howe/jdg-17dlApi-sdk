@@ -140,7 +140,7 @@ public class OrderUtil {
     }
 
     /**
-     * 4.11 获取订单信息
+     * 4.11 获取订单信息（接单后）
      *
      * @param providerId
      * @param key
@@ -180,7 +180,7 @@ public class OrderUtil {
     }
 
     /**
-     * 4.11 获取订单信息
+     * 4.15 获取订单信息（接单前）
      *
      * @param providerId
      * @param key

@@ -1,6 +1,7 @@
 package com.jiedangou.jdg.i17dl.inf.sdk.util.inf;
 
 import com.jiedangou.jdg.i17dl.inf.sdk.bean.dict.Dict;
+import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.biz.Sts;
 import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz.QueryAccount;
 import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz.QueryMargin;
 import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.resp.BaseResp;
@@ -92,6 +93,40 @@ public class SysUtil {
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
                 return resp.getData().getAs("account", Provider.class);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 4.16 获取阿里云OSS上传凭证
+     *
+     * @param providerId
+     * @param key
+     * @return
+     */
+    public static Sts getOssSts(Integer providerId, String key) {
+        try {
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_GETOSSSTS, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return resp.getData().getAs("sts", Sts.class);
             }
         } catch (Exception e) {
             e.printStackTrace();
