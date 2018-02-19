@@ -52,9 +52,13 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
-                Pager pager = resp.getData().getAs("pager", Pager.class);
-                return new QueryResult(orders, pager);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
+                    Pager pager = resp.getData().getAs("pager", Pager.class);
+                    return new QueryResult(orders, pager);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,9 +93,13 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
-                Pager pager = resp.getData().getAs("pager", Pager.class);
-                return new QueryResult(orders, pager);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
+                    Pager pager = resp.getData().getAs("pager", Pager.class);
+                    return new QueryResult(orders, pager);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,7 +139,11 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getAs("order", PrOrder.class);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    return resp.getData().getAs("order", PrOrder.class);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -171,7 +183,11 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getAs("order", PrOrder.class);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    return resp.getData().getAs("order", PrOrder.class);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -214,7 +230,11 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getAs("order", PrOrder.class);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    return resp.getData().getAs("order", PrOrder.class);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

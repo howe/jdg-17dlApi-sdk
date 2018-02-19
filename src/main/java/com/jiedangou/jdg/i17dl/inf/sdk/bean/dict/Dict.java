@@ -29,6 +29,8 @@ public class Dict {
     public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/sys/queryMargin.htm";
     public static String JDG_API_ACTION_SYS_QUERYACCOUNT = "/sys/queryAccount.htm";
     public static String JDG_API_ACTION_SYS_GETOSSSTS = "/sys/getOssSts.htm";
+
+    public static String RTN_SUCCESS = "SUCCESS";
     /**
      * 订单类型
      * 1 普通

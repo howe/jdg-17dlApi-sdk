@@ -46,7 +46,11 @@ public class GameUtil {
                     throw new Exception("返回值异常");
                 } else {
                     BaseResp resp = Json.fromJson(BaseResp.class, json);
-                    return resp.getData().getAsList("games", Game.class);
+                    if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                        return resp.getData().getAsList("games", Game.class);
+                    } else {
+                        return null;
+                    }
                 }
             }
         } catch (Exception e) {
@@ -83,7 +87,11 @@ public class GameUtil {
                     throw new Exception("返回值异常");
                 } else {
                     BaseResp resp = Json.fromJson(BaseResp.class, json);
-                    return resp.getData().getAs("game", Game.class);
+                    if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                        return resp.getData().getAs("game", Game.class);
+                    } else {
+                        return null;
+                    }
                 }
             }
         } catch (Exception e) {

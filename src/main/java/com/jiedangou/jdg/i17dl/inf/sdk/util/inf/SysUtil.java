@@ -92,7 +92,11 @@ public class SysUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getAs("account", Provider.class);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    return resp.getData().getAs("account", Provider.class);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -126,7 +130,11 @@ public class SysUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getAs("sts", Sts.class);
+                if (Strings.equalsIgnoreCase(resp.getStatus(), Dict.RTN_SUCCESS)) {
+                    return resp.getData().getAs("sts", Sts.class);
+                } else {
+                    return null;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
