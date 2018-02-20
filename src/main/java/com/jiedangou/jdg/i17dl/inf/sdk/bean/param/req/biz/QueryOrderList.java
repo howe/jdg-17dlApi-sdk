@@ -84,28 +84,26 @@ public class QueryOrderList {
     /**
      * 查询开始时间
      */
-    @Param(value = "queryStartTime", dfmt = Dict.DATE_FORMART_FULL)
-    private Date queryStartTime;
+    private String queryStartTime;
 
-    public Date getQueryStartTime() {
+    public String getQueryStartTime() {
         return queryStartTime;
     }
 
-    public void setQueryStartTime(Date queryStartTime) {
+    public void setQueryStartTime(String queryStartTime) {
         this.queryStartTime = queryStartTime;
     }
 
     /**
      * 查询开始时间
      */
-    @Param(value = "queryEndTime", dfmt = Dict.DATE_FORMART_FULL)
-    private Date queryEndTime;
+    private String queryEndTime;
 
-    public Date getQueryEndTime() {
+    public String getQueryEndTime() {
         return queryEndTime;
     }
 
-    public void setQueryEndTime(Date queryEndTime) {
+    public void setQueryEndTime(String queryEndTime) {
         this.queryEndTime = queryEndTime;
     }
 
@@ -114,7 +112,7 @@ public class QueryOrderList {
         this.pageNumber = pageNumber;
     }
 
-    public QueryOrderList(Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, Date queryStartTime, Date queryEndTime) {
+    public QueryOrderList(Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, String queryStartTime, String queryEndTime) {
         this.pageSize = pageSize;
         this.pageNumber = pageNumber;
         this.gameId = gameId;
