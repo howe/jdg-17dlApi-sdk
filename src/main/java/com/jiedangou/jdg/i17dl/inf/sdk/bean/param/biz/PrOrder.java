@@ -559,4 +559,14 @@ public class PrOrder {
     public void setOrderReceive(String orderReceive) {
         this.orderReceive = orderReceive;
     }
+
+    private String omsStr;
+
+    public String getOmsStr() {
+        return omsStr;
+    }
+
+    public void setOmsStr(String omsStr) {
+        this.omsStr = omsStr;
+    }
 }
