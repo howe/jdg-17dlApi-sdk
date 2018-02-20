@@ -1,10 +1,5 @@
 package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
 
-import com.jiedangou.jdg.i17dl.inf.sdk.bean.dict.Dict;
-import org.nutz.mvc.annotation.Param;
-
-import java.util.Date;
-
 /**
  * Created by Jianghao on 2017/12/22
  *
