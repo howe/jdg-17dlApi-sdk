@@ -392,6 +392,7 @@ public class JdgUtil {
             } else if (Strings.isEmpty(key)) {
                 throw new Exception("key为空");
             } else {
+                System.out.println(JdgUtil.buildParmas(map, new String[]{"sign"}).toString());
                 return Lang.md5(JdgUtil.buildParmas(map, new String[]{"sign"}) + key);
             }
         } catch (Exception e) {
