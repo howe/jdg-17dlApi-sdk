@@ -72,7 +72,7 @@ public class PrOrder {
     /**
      * 创建时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date createTime;
 
     public Date getCreateTime() {
@@ -380,7 +380,7 @@ public class PrOrder {
     /**
      * 任务接手时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date plAcceptTime;
 
     public Date getPlAcceptTime() {
@@ -394,7 +394,7 @@ public class PrOrder {
     /**
      * 任务开始时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date plBeginTime;
 
     public Date getPlBeginTime() {
@@ -408,7 +408,7 @@ public class PrOrder {
     /**
      * 任务完成时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date plCompleteTime;
 
     public Date getPlCompleteTime() {
@@ -497,7 +497,7 @@ public class PrOrder {
     /**
      * 订单结算时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date settleTime;
 
     public Date getSettleTime() {
@@ -511,7 +511,7 @@ public class PrOrder {
     /**
      * 订单完结时间
      */
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date finishedTime;
 
     public Date getFinishedTime() {
