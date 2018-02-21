@@ -66,7 +66,7 @@ public class Dict {
      * 2 已接单（未处理）
      * 3 处理中（代练中）
      * 4 待验收
-     * 5 撤销中
+     * 5 主动撤销中
      * 6 仲裁中
      * 7 异常
      * 8 锁定
@@ -76,10 +76,11 @@ public class Dict {
      * 12 强制仲裁
      * 13 申述中（服务商申述）
      * 14 已完成
+     * 15 被动撤销中
      * 88 已结算
      * 99 已完结
      */
-    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 88, 99};
+    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 88, 99};
 
     public static final String OPERATIONTYPE_ARRAY[] = {"OP_LOCK", "OP_UNLOCK",
             "OP_APPLY_ACCEPTANCE", "OP_CANCEL_ACCEPTANCE", "OP_COMPLETE_ACCEPTANCE",
@@ -174,7 +175,7 @@ public class Dict {
     public static final Integer ORDERSTATUS_TO_BE_ACCEPTED = 4;
 
     /**
-     * 撤销中
+     * 主动撤销中
      */
     public static final Integer ORDERSTATUS_CANCELLATION = 5;
 
@@ -223,6 +224,11 @@ public class Dict {
      * 已完成
      */
     public static final Integer ORDERSTATUS_COMPLETED = 14;
+
+    /**
+     * 被动撤销中
+     */
+    public static final Integer ORDERSTATUS_BCANCELLATION = 15;
 
     /**
      * 已结算
