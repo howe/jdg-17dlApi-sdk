@@ -2,6 +2,8 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.pro;
 
 import com.jiedangou.jdg.i17dl.inf.sdk.bean.dict.Dict;
 import org.nutz.json.JsonField;
+import org.nutz.lang.Lang;
+import org.nutz.lang.Times;
 
 import java.util.Date;
 import java.util.List;
@@ -92,6 +94,23 @@ public class OMessage {
     }
 
     public OMessage(List<String> pics) {
+        this.pics = pics;
+    }
+
+    public OMessage(String comments, List<String> pics) {
+        this.comments = comments;
+        if (!Lang.isEmpty(pics)) {
+            this.pics = pics;
+        }
+    }
+
+    public OMessage(String comments, List<String> pics, Date messageTime) {
+        if (Lang.isEmpty(messageTime)) {
+            this.messageTime = Times.now();
+        } else {
+            this.messageTime = messageTime;
+        }
+        this.comments = comments;
         this.pics = pics;
     }
 }
