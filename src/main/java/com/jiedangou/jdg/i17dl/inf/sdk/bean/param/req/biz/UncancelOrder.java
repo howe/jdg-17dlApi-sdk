@@ -5,7 +5,7 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
  *
  * @author Jianghao(howechiang @ gmail.com)
  */
-public class UnapplycancelOrder {
+public class UncancelOrder {
 
     private String orderNum;
 
@@ -17,10 +17,10 @@ public class UnapplycancelOrder {
         this.orderNum = orderNum;
     }
 
-    public UnapplycancelOrder(String orderNum) {
+    public UncancelOrder(String orderNum) {
         this.orderNum = orderNum;
     }
 
-    public UnapplycancelOrder() {
+    public UncancelOrder() {
     }
 }
