@@ -286,7 +286,7 @@ public class OrderUtil {
     }
 
     /**
-     * 4.7 完成订单
+     * 4.7 提交订单验收（完成订单）
      *
      * @param providerId
      * @param key
@@ -316,6 +316,46 @@ public class OrderUtil {
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
             String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_COMPLETEORDER, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return new Resp(resp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 4.19 取消订单验收
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static Resp uncompleteOrder(Integer providerId, String key, UncompleteOrder biz) {
+
+        try {
+
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getOrderNum())) {
+                throw new Exception("接单狗订单号为空");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNCOMPLETEORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -359,6 +399,49 @@ public class OrderUtil {
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
             String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_ABNORMALORDER, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return new Resp(resp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 4.17 取消订单异常信息
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static Resp unabnormalOrder(Integer providerId, String key, UnabnormalOrder biz) {
+
+        try {
+
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getOrderNum())) {
+                throw new Exception("接单狗订单号为空");
+            }
+            if (Lang.isEmpty(biz.getOm())) {
+                throw new Exception("备注信息");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNABNORMALORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -508,6 +591,46 @@ public class OrderUtil {
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
             String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_APPLYCANCELORDER, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return new Resp(resp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 4.18 取消订单撤销
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static Resp unapplycancelOrder(Integer providerId, String key, UnapplycancelOrder biz) {
+
+        try {
+
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getOrderNum())) {
+                throw new Exception("接单狗订单号为空");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNAPPLYCANCELORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
