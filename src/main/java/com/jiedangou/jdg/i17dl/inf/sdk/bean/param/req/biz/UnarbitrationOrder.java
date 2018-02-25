@@ -5,7 +5,7 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
  *
  * @author Jianghao(howechiang @ gmail.com)
  */
-public class UnArbitrationOrder {
+public class UnarbitrationOrder {
 
     private String orderNum;
 
@@ -17,10 +17,10 @@ public class UnArbitrationOrder {
         this.orderNum = orderNum;
     }
 
-    public UnArbitrationOrder(String orderNum) {
+    public UnarbitrationOrder(String orderNum) {
         this.orderNum = orderNum;
     }
 
-    public UnArbitrationOrder() {
+    public UnarbitrationOrder() {
     }
 }
