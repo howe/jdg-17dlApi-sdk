@@ -8,6 +8,19 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
 public class QueryOrderList {
 
     /**
+     * 接单狗订单号
+     */
+    private String orderNum;
+
+    public String getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(String orderNum) {
+        this.orderNum = orderNum;
+    }
+
+    /**
      * 每页数据量
      */
     private Integer pageSize;
@@ -107,7 +120,8 @@ public class QueryOrderList {
         this.pageNumber = pageNumber;
     }
 
-    public QueryOrderList(Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, String queryStartTime, String queryEndTime) {
+    public QueryOrderList(String orderNum, Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, String queryStartTime, String queryEndTime) {
+        this.orderNum = orderNum;
         this.pageSize = pageSize;
         this.pageNumber = pageNumber;
         this.gameId = gameId;
