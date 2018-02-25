@@ -18,6 +18,11 @@ public class AcceptOrder {
     private String outOrderNum;
 
     /**
+     * 支付密码
+     */
+    private String payPassword;
+
+    /**
      * 服务商处理员信息
      */
     private String receiver;
@@ -49,9 +54,10 @@ public class AcceptOrder {
     public AcceptOrder() {
     }
 
-    public AcceptOrder(String outOrderNum, String pOrderNum, String receiver) {
+    public AcceptOrder(String outOrderNum, String pOrderNum, String payPassword, String receiver) {
         this.pOrderNum = pOrderNum;
         this.outOrderNum = outOrderNum;
+        this.payPassword = payPassword;
         this.receiver = receiver;
     }
 }

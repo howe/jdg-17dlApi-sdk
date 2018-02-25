@@ -21,48 +21,8 @@ import org.nutz.lang.Times;
  */
 public class SysUtil {
 
-
     /**
-     * 4.10 查看剩余保证金
-     *
-     * @param providerId
-     * @param key
-     * @param biz
-     * @return
-     */
-    public static Double queryMargin(Integer providerId, String key, QueryMargin biz) {
-        try {
-            if (Lang.isEmpty(providerId)) {
-                throw new Exception("服务商ID为空");
-            }
-            if (Strings.isBlank(key)) {
-                throw new Exception("密钥为空");
-            }
-            if (Strings.isBlank(biz.getPayPassword())) {
-                throw new Exception("支付密码为空");
-            }
-            BaseReq req = new BaseReq();
-            req.setProviderId(providerId);
-            req.setTimestamp(Times.getTS());
-            req.setVersion(Dict.JDG_API_VERSION);
-            biz.setPayPassword(Lang.md5(biz.getPayPassword()));
-            req.setBizData(Lang.obj2nutmap(biz));
-            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_QUERYMARGIN, Json.toJson(req));
-            if (Strings.isEmpty(json)) {
-                throw new Exception("返回值异常");
-            } else {
-                BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getData().getDouble("margin", 0.0);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    /**
-     * 4.14 查看账号信息
+     * 4.16 查看账号信息
      *
      * @param providerId
      * @param key
@@ -105,7 +65,46 @@ public class SysUtil {
     }
 
     /**
-     * 4.16 获取阿里云OSS上传凭证
+     * 4.17 查看剩余保证金
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static Double queryMargin(Integer providerId, String key, QueryMargin biz) {
+        try {
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getPayPassword())) {
+                throw new Exception("支付密码为空");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            biz.setPayPassword(Lang.md5(biz.getPayPassword()));
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_QUERYMARGIN, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return resp.getData().getDouble("margin", 0.0);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 4.18 获取阿里云OSS上传凭证
      *
      * @param providerId
      * @param key
