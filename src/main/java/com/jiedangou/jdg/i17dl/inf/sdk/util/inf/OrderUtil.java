@@ -615,7 +615,7 @@ public class OrderUtil {
      * @param biz
      * @return
      */
-    public static Resp unArbitrationOrder(Integer providerId, String key, UnarbitrationOrder biz) {
+    public static Resp unarbitrationOrder(Integer providerId, String key, UnarbitrationOrder biz) {
 
         try {
 
