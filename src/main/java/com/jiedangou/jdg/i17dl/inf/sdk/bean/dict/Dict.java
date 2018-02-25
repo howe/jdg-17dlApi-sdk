@@ -29,7 +29,7 @@ public class Dict {
     public static String JDG_API_ACTION_ORDER_QUERYORDERLIST = "/order/queryOrderList.htm";
     public static String JDG_API_ACTION_ORDER_APPLYCANCELORDER = "/order/applycancelOrder.htm";
     public static String JDG_API_ACTION_ORDER_UNCANCELORDER = "/order/uncancelOrder.htm";
-
+    public static String JDG_API_ACTION_ORDER_UNARBITRATION = "/order/unArbitrationOrder.htm";
     public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/sys/queryMargin.htm";
     public static String JDG_API_ACTION_SYS_QUERYACCOUNT = "/sys/queryAccount.htm";
     public static String JDG_API_ACTION_SYS_GETOSSSTS = "/sys/getOssSts.htm";

@@ -607,4 +607,43 @@ public class OrderUtil {
         }
     }
 
+    /**
+     * 4.16 取消订单仲裁
+     *
+     * @param providerId
+     * @param key
+     * @param biz
+     * @return
+     */
+    public static Resp unArbitrationOrder(Integer providerId, String key, UnArbitrationOrder biz) {
+
+        try {
+
+            if (Lang.isEmpty(providerId)) {
+                throw new Exception("服务商ID为空");
+            }
+            if (Strings.isBlank(key)) {
+                throw new Exception("密钥为空");
+            }
+            if (Strings.isBlank(biz.getOrderNum())) {
+                throw new Exception("接单狗订单号为空");
+            }
+            BaseReq req = new BaseReq();
+            req.setProviderId(providerId);
+            req.setTimestamp(Times.getTS());
+            req.setVersion(Dict.JDG_API_VERSION);
+            req.setBizData(Lang.obj2nutmap(biz));
+            req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNARBITRATION, Json.toJson(req));
+            if (Strings.isEmpty(json)) {
+                throw new Exception("返回值异常");
+            } else {
+                BaseResp resp = Json.fromJson(BaseResp.class, json);
+                return new Resp(resp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
