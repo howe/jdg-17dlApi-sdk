@@ -22,6 +22,14 @@ public class AcceptOrder {
      */
     private String payPassword;
 
+    public String getPayPassword() {
+        return payPassword;
+    }
+
+    public void setPayPassword(String payPassword) {
+        this.payPassword = payPassword;
+    }
+
     /**
      * 服务商处理员信息
      */

@@ -135,10 +135,14 @@ public class OrderUtil {
             if (Strings.isBlank(biz.getOutOrderNum())) {
                 throw new Exception("合作商订单号为空");
             }
+            if (Strings.isBlank(biz.getPayPassword())) {
+                throw new Exception("支付密码为空");
+            }
             BaseReq req = new BaseReq();
             req.setProviderId(providerId);
             req.setTimestamp(Times.getTS());
             req.setVersion(Dict.JDG_API_VERSION);
+            biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
             String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_ACCEPTORDER, Json.toJson(req));
