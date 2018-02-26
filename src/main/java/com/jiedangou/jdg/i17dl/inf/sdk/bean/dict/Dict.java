@@ -12,6 +12,7 @@ public class Dict {
     public static final String DATE_CHINA_TIMEZONE = "GMT+8";
 
     public static String JDG_API_HOST = "https://17dl.api.jiedangou.com";
+    public static String JDG_API_DEV_HOST = "https://17dl.api.dev.jiedangou.com";
 
     public static String JDG_API_ACTION_GAME_QUERYGAMELIST = "/game/queryGameList.htm";
     public static String JDG_API_ACTION_GAME_QUERYGAMEDETAIL = "/game/queryGame.htm";
