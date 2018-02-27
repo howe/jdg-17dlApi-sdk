@@ -5,7 +5,7 @@
 <dependency>
     <groupId>com.jiedangou</groupId>
     <artifactId>jdg-17dlInf-sdk</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
@@ -34,6 +34,6 @@
 <dependency>
     <groupId>com.jiedangou</groupId>
     <artifactId>jdg-17dlInf-sdk</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
 </dependency>
 ```
