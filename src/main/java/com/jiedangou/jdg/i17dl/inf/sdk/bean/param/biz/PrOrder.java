@@ -102,7 +102,6 @@ public class PrOrder {
      * 14 已完成
      * 15 被动撤销中（号主）
      * 88 已结算
-     * 99 已完结
      */
     private Integer orderStatus;
 

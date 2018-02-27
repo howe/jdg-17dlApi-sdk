@@ -82,7 +82,7 @@ public class Dict {
      * 88 已结算
      * 99 已完结
      */
-    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 88, 99};
+    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 88};
 
     public static final String OPERATIONTYPE_ARRAY[] = {"OP_LOCK", "OP_UNLOCK",
             "OP_APPLY_ACCEPTANCE", "OP_CANCEL_ACCEPTANCE", "OP_COMPLETE_ACCEPTANCE",
@@ -236,9 +236,4 @@ public class Dict {
      * 已结算
      */
     public static final Integer ORDERSTATUS_SETTLED = 88;
-
-    /**
-     * 已完成
-     */
-    public static final Integer ORDERSTATUS_FINISHED = 99;
 }
