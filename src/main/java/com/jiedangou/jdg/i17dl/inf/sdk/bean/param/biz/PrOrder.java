@@ -507,6 +507,19 @@ public class PrOrder {
     }
 
     /**
+     * 是否完结
+     */
+    private Boolean isFinished;
+
+    public Boolean getFinished() {
+        return isFinished;
+    }
+
+    public void setFinished(Boolean finished) {
+        isFinished = finished;
+    }
+
+    /**
      * 订单锁定状态
      */
     private Boolean isLock;
