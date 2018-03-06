@@ -47,7 +47,8 @@ public class JdgUtil {
                 return map;
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -70,7 +71,8 @@ public class JdgUtil {
                 return buildParmas(params);
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -93,10 +95,14 @@ public class JdgUtil {
                         sb.append(k + "=" + v + "&");
                     }
                 });
-                return Strings.removeLast(sb.toString().replaceAll(" , ", ",").replaceAll(" ,", ",").replaceAll(", ", ","), '&');
+                return Strings.removeLast(sb.toString()
+                        .replaceAll(" , ", ",")
+                        .replaceAll(" ,", ",")
+                        .replaceAll(", ", ","), '&');
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -124,7 +130,8 @@ public class JdgUtil {
                     }
                 }
             } catch (Exception e) {
-                return null;
+                e.printStackTrace();
+                throw Lang.wrapThrow(e);
             }
         }
 
@@ -146,7 +153,8 @@ public class JdgUtil {
                     }
                 }
             } catch (Exception e) {
-                return null;
+                e.printStackTrace();
+                throw Lang.wrapThrow(e);
             }
         }
     }
@@ -170,7 +178,8 @@ public class JdgUtil {
                     return org.nutz.repo.Base64.encodeToString(s.getBytes(Encoding.CHARSET_UTF8), true);
                 }
             } catch (Exception e) {
-                return null;
+                e.printStackTrace();
+                throw Lang.wrapThrow(e);
             }
         }
 
@@ -188,7 +197,8 @@ public class JdgUtil {
                     return new String(org.nutz.repo.Base64.decode(s));
                 }
             } catch (Exception e) {
-                return null;
+                e.printStackTrace();
+                throw Lang.wrapThrow(e);
             }
         }
     }
@@ -215,7 +225,8 @@ public class JdgUtil {
                 }
             }
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -242,7 +253,8 @@ public class JdgUtil {
                 }
             }
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -269,7 +281,8 @@ public class JdgUtil {
                 return false;
             }
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -293,7 +306,8 @@ public class JdgUtil {
             }
             return true;
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -320,7 +334,8 @@ public class JdgUtil {
             }
             return true;
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -373,7 +388,8 @@ public class JdgUtil {
                 return false;
             }
         } catch (Exception e) {
-            return false;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -395,7 +411,8 @@ public class JdgUtil {
                 return Lang.md5(JdgUtil.buildParmas(map, new String[]{"sign"}) + key);
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 }

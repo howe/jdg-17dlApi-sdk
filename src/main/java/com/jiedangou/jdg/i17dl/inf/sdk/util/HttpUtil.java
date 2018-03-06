@@ -30,7 +30,8 @@ public class HttpUtil {
                 return Http.get(url).getContent();
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -55,7 +56,8 @@ public class HttpUtil {
                 return Http.post(url, parms, 15000);
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -76,7 +78,8 @@ public class HttpUtil {
                 return Http.post(url, null, 15000);
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -105,7 +108,8 @@ public class HttpUtil {
                 return Http.post3(url, parms, header, 15000).getContent();
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -131,7 +135,8 @@ public class HttpUtil {
                 return Http.get(url, header, 15000).getContent();
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -159,7 +164,8 @@ public class HttpUtil {
                 return resp.getContent();
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -182,7 +188,8 @@ public class HttpUtil {
                 return Http.postXML(url, xml, 15000).getContent();
             }
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
+            throw Lang.wrapThrow(e);
         }
     }
 }

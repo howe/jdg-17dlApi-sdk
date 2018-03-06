@@ -60,7 +60,7 @@ public class SysUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -99,7 +99,7 @@ public class SysUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 
@@ -137,7 +137,7 @@ public class SysUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            throw Lang.wrapThrow(e);
         }
     }
 }
