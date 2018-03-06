@@ -55,6 +55,12 @@ public class RepealOrder {
         this.om = om;
     }
 
+    public RepealOrder(String orderNum, Integer op, String payPassword) {
+        this.orderNum = orderNum;
+        this.op = op;
+        this.payPassword = payPassword;
+    }
+
     public RepealOrder() {
     }
 }
