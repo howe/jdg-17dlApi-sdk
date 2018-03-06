@@ -49,16 +49,11 @@ public class RepealOrder {
         this.om = om;
     }
 
-    public RepealOrder(String orderNum, Integer op, OMessage om) {
-        this.orderNum = orderNum;
-        this.op = op;
-        this.om = om;
-    }
-
-    public RepealOrder(String orderNum, Integer op, String payPassword) {
+    public RepealOrder(String orderNum, Integer op, String payPassword, OMessage om) {
         this.orderNum = orderNum;
         this.op = op;
         this.payPassword = payPassword;
+        this.om = om;
     }
 
     public RepealOrder() {
