@@ -47,7 +47,7 @@ public class SysUtil {
             biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_QUERYACCOUNT, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_SYS_QUERYACCOUNT, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -90,7 +90,7 @@ public class SysUtil {
             biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_QUERYMARGIN, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_SYS_QUERYMARGIN, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -124,7 +124,7 @@ public class SysUtil {
             req.setTimestamp(Times.getTS());
             req.setVersion(Dict.JDG_API_VERSION);
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_SYS_GETOSSSTS, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_SYS_GETOSSSTS, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {

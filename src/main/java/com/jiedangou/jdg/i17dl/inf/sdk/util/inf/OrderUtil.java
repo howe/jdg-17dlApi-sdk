@@ -47,7 +47,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_GETNEWORDERLIST, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_GETNEWORDERLIST, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -94,7 +94,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_GETORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_GETORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -142,7 +142,7 @@ public class OrderUtil {
             biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_ACCEPTORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_ACCEPTORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -189,7 +189,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_BEGINORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_BEGINORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -232,7 +232,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_ABNORMALORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_ABNORMALORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -275,7 +275,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_COMPLETEORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_COMPLETEORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -328,7 +328,7 @@ public class OrderUtil {
             biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_REPEALORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_REPEALORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -363,7 +363,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_QUERYORDERLIST, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_QUERYORDERLIST, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -409,7 +409,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_FETCHORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_FETCHORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -466,7 +466,7 @@ public class OrderUtil {
             biz.setPayPassword(Lang.md5(biz.getPayPassword()));
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_APPLYCANCELORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_APPLYCANCELORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -506,7 +506,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNCOMPLETEORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_UNCOMPLETEORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -550,7 +550,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNABNORMALORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_UNABNORMALORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -591,7 +591,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNCANCELORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_UNCANCELORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
@@ -631,7 +631,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_UNARBITRATION, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_DEV_HOST + Dict.JDG_API_ACTION_ORDER_UNARBITRATION, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
