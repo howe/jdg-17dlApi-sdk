@@ -17,19 +17,8 @@ public class GetOrder {
         this.outOrderNum = outOrderNum;
     }
 
-    private Integer gameId;
-
-    public Integer getGameId() {
-        return gameId;
-    }
-
-    public void setGameId(Integer gameId) {
-        this.gameId = gameId;
-    }
-
-    public GetOrder(Integer gameId, String outOrderNum) {
+    public GetOrder(String outOrderNum) {
         this.outOrderNum = outOrderNum;
-        this.gameId = gameId;
     }
 
     public GetOrder() {
