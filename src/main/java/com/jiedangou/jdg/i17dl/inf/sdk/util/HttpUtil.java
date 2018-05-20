@@ -23,7 +23,7 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else {
@@ -47,11 +47,11 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else if (parms.isEmpty()) {
-                throw new Exception("parms为空");
+                throw new NullPointerException("parms为空");
             } else {
                 return Http.post(url, parms, 15000);
             }
@@ -71,7 +71,7 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else {
@@ -95,15 +95,15 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else if (Lang.isEmpty(header)) {
-                throw new Exception("header为空");
+                throw new NullPointerException("header为空");
             } else if (header.getAll().isEmpty()) {
-                throw new Exception("header为空");
+                throw new NullPointerException("header为空");
             } else if (parms.isEmpty()) {
-                throw new Exception("parms为空");
+                throw new NullPointerException("parms为空");
             } else {
                 return Http.post3(url, parms, header, 15000).getContent();
             }
@@ -124,13 +124,13 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else if (Lang.isEmpty(header)) {
-                throw new Exception("header为空");
+                throw new NullPointerException("header为空");
             } else if (header.getAll().isEmpty()) {
-                throw new Exception("header为空");
+                throw new NullPointerException("header为空");
             } else {
                 return Http.get(url, header, 15000).getContent();
             }
@@ -151,11 +151,11 @@ public class HttpUtil {
 
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else if (Lang.isEmpty(json)) {
-                throw new Exception("json为空");
+                throw new NullPointerException("json为空");
             } else {
                 Request req = Request.create(url, Request.METHOD.POST);
                 req.getHeader().set("Content-Type", "application/json;charset=UTF-8");
@@ -179,11 +179,11 @@ public class HttpUtil {
     public static String postXml(String url, String xml) {
         try {
             if (Strings.isBlank(url)) {
-                throw new Exception("url为空");
+                throw new NullPointerException("url为空");
             } else if (!Strings.isUrl(url)) {
                 throw new Exception("url格式不正确");
             } else if (Lang.isEmpty(xml)) {
-                throw new Exception("xml为空");
+                throw new NullPointerException("xml为空");
             } else {
                 return Http.postXML(url, xml, 15000).getContent();
             }

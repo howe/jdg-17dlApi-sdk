@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jiedangou</groupId>
     <artifactId>jdg-17dlInf-sdk</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
     <packaging>jar</packaging>
     <name>接单狗对接接口（17代练）- SDK</name>
     <url>https://github.com/howe/jdg-17dlInf-sdk</url>

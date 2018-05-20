@@ -32,7 +32,7 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(params)) {
-                throw new Exception("params参数为空");
+                throw new NullPointerException("params参数为空");
             } else {
                 Map<String, Object> map = new LinkedHashMap<>();
                 if (Strings.equalsIgnoreCase(order, "desc")) {
@@ -63,7 +63,7 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(f)) {
-                throw new Exception("params参数为空");
+                throw new NullPointerException("params参数为空");
             } else if (Lang.isEmpty(f)) {
                 return buildParmas(params);
             } else {
@@ -86,7 +86,7 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(params)) {
-                throw new Exception("params参数为空");
+                throw new NullPointerException("params参数为空");
             } else {
                 params = sorting(params, "asc");
                 StringBuffer sb = new StringBuffer();
@@ -121,7 +121,7 @@ public class JdgUtil {
 
             try {
                 if (Strings.isBlank(s)) {
-                    throw new Exception("s加密对象为空");
+                    throw new NullPointerException("s加密对象为空");
                 } else {
                     try {
                         return URLEncoder.encode(s, Encoding.UTF8);
@@ -144,7 +144,7 @@ public class JdgUtil {
         public static String decode(String s) {
             try {
                 if (Strings.isBlank(s)) {
-                    throw new Exception("s加密对象为空");
+                    throw new NullPointerException("s加密对象为空");
                 } else {
                     try {
                         return URLDecoder.decode(s, Encoding.UTF8);
@@ -173,7 +173,7 @@ public class JdgUtil {
         public static String encode(String s) {
             try {
                 if (Strings.isBlank(s)) {
-                    throw new Exception("s加密对象为空");
+                    throw new NullPointerException("s加密对象为空");
                 } else {
                     return org.nutz.repo.Base64.encodeToString(s.getBytes(Encoding.CHARSET_UTF8), true);
                 }
@@ -192,7 +192,7 @@ public class JdgUtil {
         public static String decode(String s) {
             try {
                 if (Strings.isBlank(s)) {
-                    throw new Exception("s解密对象为空");
+                    throw new NullPointerException("s解密对象为空");
                 } else {
                     return new String(org.nutz.repo.Base64.decode(s));
                 }
@@ -214,9 +214,9 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(params)) {
-                throw new Exception("params参数为空");
+                throw new NullPointerException("params参数为空");
             } else if (Strings.isBlank(key)) {
-                throw new Exception("key密钥为空");
+                throw new NullPointerException("key密钥为空");
             } else {
                 if (Strings.equalsIgnoreCase(Lang.md5(Url.encode(buildParmas(params, new String[]{"sign"})) + key), params.getString("sign"))) {
                     return true;
@@ -242,9 +242,9 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(params)) {
-                throw new Exception("params参数为空");
+                throw new NullPointerException("params参数为空");
             } else if (Strings.isBlank(key)) {
-                throw new Exception("key密钥为空");
+                throw new NullPointerException("key密钥为空");
             } else {
                 if (Strings.equalsIgnoreCase(Lang.md5(Url.encode(buildParmas(params, new String[]{"sign"})) + key), sign)) {
                     return true;
@@ -269,9 +269,9 @@ public class JdgUtil {
 
         try {
             if (Lang.isEmpty(array)) {
-                throw new Exception("array为空");
+                throw new NullPointerException("array为空");
             } else if (Lang.isEmpty(val)) {
-                throw new Exception("val为空");
+                throw new NullPointerException("val为空");
             } else {
                 for (int a : Arrays.asList(array)) {
                     if (Lang.equals(a, val)) {
@@ -296,13 +296,13 @@ public class JdgUtil {
 
         try {
             if (Strings.isEmpty(account.getCsrAccount())) {
-                throw new Exception("account.csrAccount客户游戏账号为空");
+                throw new NullPointerException("account.csrAccount客户游戏账号为空");
             }
             if (Strings.isEmpty(account.getCsrPassword())) {
-                throw new Exception("account.csrPassword客户游戏密码为空");
+                throw new NullPointerException("account.csrPassword客户游戏密码为空");
             }
             if (Strings.isEmpty(account.getCsrRole())) {
-                throw new Exception("account.csrRole客户游戏角色为空");
+                throw new NullPointerException("account.csrRole客户游戏角色为空");
             }
             return true;
         } catch (Exception e) {
@@ -321,7 +321,7 @@ public class JdgUtil {
 
         try {
             if (Strings.isEmpty(contact.getCtPhone())) {
-                throw new Exception("contact.ctPhone联系电话为空");
+                throw new NullPointerException("contact.ctPhone联系电话为空");
             }
             if (!Strings.isMobile(contact.getCtPhone())) {
                 throw new Exception("contact.ctPhone联系电话格式错误");
@@ -376,9 +376,9 @@ public class JdgUtil {
         try {
 
             if (Lang.isEmpty(array)) {
-                throw new Exception("array为空");
+                throw new NullPointerException("array为空");
             } else if (Strings.isEmpty(val)) {
-                throw new Exception("val为空");
+                throw new NullPointerException("val为空");
             } else {
                 for (String a : Arrays.asList(array)) {
                     if (Strings.equalsIgnoreCase(a, val)) {
@@ -404,9 +404,9 @@ public class JdgUtil {
         try {
 
             if (Lang.isEmpty(map)) {
-                throw new Exception("map为空");
+                throw new NullPointerException("map为空");
             } else if (Strings.isEmpty(key)) {
-                throw new Exception("key为空");
+                throw new NullPointerException("key为空");
             } else {
                 return Lang.md5(JdgUtil.buildParmas(map, new String[]{"sign"}) + key);
             }
