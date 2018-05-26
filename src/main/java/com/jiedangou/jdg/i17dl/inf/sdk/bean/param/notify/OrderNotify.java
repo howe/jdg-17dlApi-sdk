@@ -30,7 +30,7 @@ public class OrderNotify {
 
     private String pOrderNum;
 
-    private Double addMoney;
+    private Integer addMoney;
 
     private Integer addTime;
 
@@ -38,11 +38,11 @@ public class OrderNotify {
 
     private OMessage om;
 
-    private Double efficiencyComp;
+    private Integer efficiencyComp;
 
-    private Double safetyComp;
+    private Integer safetyComp;
 
-    private Double orderSettle;
+    private Integer orderSettle;
 
     public Integer getProviderId() {
         return providerId;
