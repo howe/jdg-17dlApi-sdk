@@ -9,9 +9,15 @@ import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.pro.OMessage;
  */
 public class RepealOrder {
 
-    private String orderNum;
+    private String orderNo;
 
-    private Integer op;
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
+    }
 
     private String payPassword;
 
@@ -25,19 +31,13 @@ public class RepealOrder {
 
     private OMessage om;
 
-    public String getOrderNum() {
-        return orderNum;
-    }
+    private int op;
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
-    }
-
-    public Integer getOp() {
+    public int getOp() {
         return op;
     }
 
-    public void setOp(Integer op) {
+    public void setOp(int op) {
         this.op = op;
     }
 
@@ -49,8 +49,8 @@ public class RepealOrder {
         this.om = om;
     }
 
-    public RepealOrder(String orderNum, Integer op, String payPassword, OMessage om) {
-        this.orderNum = orderNum;
+    public RepealOrder(String orderNo, int op, String payPassword, OMessage om) {
+        this.orderNo = orderNo;
         this.op = op;
         this.payPassword = payPassword;
         this.om = om;

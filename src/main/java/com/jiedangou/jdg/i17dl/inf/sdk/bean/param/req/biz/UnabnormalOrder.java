@@ -9,17 +9,17 @@ import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.pro.OMessage;
  */
 public class UnabnormalOrder {
 
-    private String orderNum;
+    private String orderNo;
+
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
+    }
 
     private OMessage om;
-
-    public String getOrderNum() {
-        return orderNum;
-    }
-
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
-    }
 
     public OMessage getOm() {
         return om;
@@ -29,8 +29,8 @@ public class UnabnormalOrder {
         this.om = om;
     }
 
-    public UnabnormalOrder(String orderNum, OMessage om) {
-        this.orderNum = orderNum;
+    public UnabnormalOrder(String orderNo, OMessage om) {
+        this.orderNo = orderNo;
         this.om = om;
     }
 

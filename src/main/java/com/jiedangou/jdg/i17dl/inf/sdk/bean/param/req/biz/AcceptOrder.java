@@ -10,12 +10,28 @@ public class AcceptOrder {
     /**
      * 服务商订单号
      */
-    private String pOrderNum;
+    private String pOrderNo;
+
+    public String getpOrderNo() {
+        return pOrderNo;
+    }
+
+    public void setpOrderNo(String pOrderNo) {
+        this.pOrderNo = pOrderNo;
+    }
 
     /**
      * 合作商订单号
      */
-    private String outOrderNum;
+    private String outOrderNo;
+
+    public String getOutOrderNo() {
+        return outOrderNo;
+    }
+
+    public void setOutOrderNo(String outOrderNo) {
+        this.outOrderNo = outOrderNo;
+    }
 
     /**
      * 支付密码
@@ -43,28 +59,12 @@ public class AcceptOrder {
         this.receiver = receiver;
     }
 
-    public String getOutOrderNum() {
-        return outOrderNum;
-    }
-
-    public void setOutOrderNum(String outOrderNum) {
-        this.outOrderNum = outOrderNum;
-    }
-
-    public String getpOrderNum() {
-        return pOrderNum;
-    }
-
-    public void setpOrderNum(String pOrderNum) {
-        this.pOrderNum = pOrderNum;
-    }
-
     public AcceptOrder() {
     }
 
-    public AcceptOrder(String outOrderNum, String pOrderNum, String payPassword, String receiver) {
-        this.pOrderNum = pOrderNum;
-        this.outOrderNum = outOrderNum;
+    public AcceptOrder(String outOrderNo, String pOrderNo, String payPassword, String receiver) {
+        this.pOrderNo = pOrderNo;
+        this.outOrderNo = outOrderNo;
         this.payPassword = payPassword;
         this.receiver = receiver;
     }

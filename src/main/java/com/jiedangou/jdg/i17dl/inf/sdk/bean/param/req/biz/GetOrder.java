@@ -7,18 +7,18 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
  */
 public class GetOrder {
 
-    private String outOrderNum;
+    private String outOrderNo;
 
-    public String getOutOrderNum() {
-        return outOrderNum;
+    public String getOutOrderNo() {
+        return outOrderNo;
     }
 
-    public void setOutOrderNum(String outOrderNum) {
-        this.outOrderNum = outOrderNum;
+    public void setOutOrderNo(String outOrderNo) {
+        this.outOrderNo = outOrderNo;
     }
 
-    public GetOrder(String outOrderNum) {
-        this.outOrderNum = outOrderNum;
+    public GetOrder(String outOrderNo) {
+        this.outOrderNo = outOrderNo;
     }
 
     public GetOrder() {

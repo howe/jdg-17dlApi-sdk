@@ -9,7 +9,7 @@ import com.jiedangou.jdg.i17dl.inf.sdk.bean.param.pro.OMessage;
  */
 public class ApplycancelOrder {
 
-    private String orderNum;
+    private String orderNo;
 
     /**
      * 需赔付的补偿
@@ -27,12 +27,12 @@ public class ApplycancelOrder {
 
     private OMessage om;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 
     public int getRecoup() {
@@ -67,8 +67,8 @@ public class ApplycancelOrder {
         this.om = om;
     }
 
-    public ApplycancelOrder(String orderNum, int recoup, int reward, String payPassword, OMessage om) {
-        this.orderNum = orderNum;
+    public ApplycancelOrder(String orderNo, int recoup, int reward, String payPassword, OMessage om) {
+        this.orderNo = orderNo;
         this.recoup = recoup;
         this.reward = reward;
         this.payPassword = payPassword;

@@ -7,18 +7,18 @@ package com.jiedangou.jdg.i17dl.inf.sdk.bean.param.req.biz;
  */
 public class UncancelOrder {
 
-    private String orderNum;
+    private String orderNo;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 
-    public UncancelOrder(String orderNum) {
-        this.orderNum = orderNum;
+    public UncancelOrder(String orderNo) {
+        this.orderNo = orderNo;
     }
 
     public UncancelOrder() {

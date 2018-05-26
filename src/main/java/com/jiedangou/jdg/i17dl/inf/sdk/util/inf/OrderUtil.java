@@ -85,7 +85,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOutOrderNum())) {
+            if (Strings.isBlank(biz.getOutOrderNo())) {
                 throw new Exception("合作商订单号为空");
             }
             BaseReq req = new BaseReq();
@@ -129,7 +129,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOutOrderNum())) {
+            if (Strings.isBlank(biz.getOutOrderNo())) {
                 throw new Exception("合作商订单号为空");
             }
             if (Strings.isBlank(biz.getPayPassword())) {
@@ -177,7 +177,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getOm().getPics())) {
@@ -220,7 +220,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getOm())) {
@@ -263,7 +263,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getOm().getPics())) {
@@ -306,7 +306,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getOp())) {
@@ -400,7 +400,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             BaseReq req = new BaseReq();
@@ -444,7 +444,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getRecoup())) {
@@ -497,7 +497,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             BaseReq req = new BaseReq();
@@ -538,7 +538,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             if (Lang.isEmpty(biz.getOm())) {
@@ -582,7 +582,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             BaseReq req = new BaseReq();
@@ -622,7 +622,7 @@ public class OrderUtil {
             if (Strings.isBlank(key)) {
                 throw new Exception("密钥为空");
             }
-            if (Strings.isBlank(biz.getOrderNum())) {
+            if (Strings.isBlank(biz.getOrderNo())) {
                 throw new Exception("接单狗订单号为空");
             }
             BaseReq req = new BaseReq();

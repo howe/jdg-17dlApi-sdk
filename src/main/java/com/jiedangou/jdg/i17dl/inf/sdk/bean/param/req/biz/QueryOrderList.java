@@ -10,14 +10,14 @@ public class QueryOrderList {
     /**
      * 接单狗订单号
      */
-    private String orderNum;
+    private String orderNo;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 
     /**
@@ -120,8 +120,8 @@ public class QueryOrderList {
         this.pageNumber = pageNumber;
     }
 
-    public QueryOrderList(String orderNum, Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, String queryStartTime, String queryEndTime) {
-        this.orderNum = orderNum;
+    public QueryOrderList(String orderNo, Integer pageSize, Integer pageNumber, Integer gameId, Integer orderStatus, String queryStartTime, String queryEndTime) {
+        this.orderNo = orderNo;
         this.pageSize = pageSize;
         this.pageNumber = pageNumber;
         this.gameId = gameId;
